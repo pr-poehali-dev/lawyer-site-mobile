@@ -75,7 +75,7 @@ export default function CasesSection() {
                   : 'glass text-muted-foreground'
               }`}
               style={filter === f ? {
-                background: 'linear-gradient(135deg, hsl(45,85%,65%), hsl(43,74%,45%))',
+                background: 'linear-gradient(135deg, hsl(40,80%,48%), hsl(36,72%,34%))',
               } : {}}
             >
               {f}
@@ -90,9 +90,9 @@ export default function CasesSection() {
               key={c.id}
               className="rounded-2xl overflow-hidden cursor-pointer transition-all active:scale-[0.98]"
               style={{
-                background: 'hsl(20,8%,10%)',
-                border: expanded === c.id ? '1px solid hsla(43,74%,52%,0.3)' : '1px solid hsla(43,74%,52%,0.08)',
-                boxShadow: expanded === c.id ? '0 8px 32px hsla(43,74%,52%,0.12)' : 'none',
+                background: '#ffffff',
+                border: expanded === c.id ? '1px solid hsla(36,72%,40%,0.35)' : '1px solid hsla(36,72%,40%,0.12)',
+                boxShadow: expanded === c.id ? '0 8px 28px hsla(36,72%,40%,0.12)' : '0 2px 8px hsla(25,25%,12%,0.06)',
                 animationDelay: `${i * 80}ms`,
               }}
               onClick={() => setExpanded(expanded === c.id ? null : c.id)}
@@ -138,7 +138,7 @@ export default function CasesSection() {
 
               {/* Expanded */}
               {expanded === c.id && (
-                <div className="px-4 pb-4" style={{ borderTop: '1px solid hsla(43,74%,52%,0.1)' }}>
+                <div className="px-4 pb-4" style={{ borderTop: '1px solid hsla(36,72%,40%,0.1)' }}>
                   <p className="text-sm text-muted-foreground font-golos leading-relaxed pt-3">
                     {c.description}
                   </p>

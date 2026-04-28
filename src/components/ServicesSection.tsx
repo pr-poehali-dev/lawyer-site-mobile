@@ -8,8 +8,8 @@ const services = [
     title: 'Уголовная защита',
     subtitle: 'На всех стадиях',
     description: 'Защита подозреваемых, обвиняемых и подсудимых от предъявленных обвинений. Выстраивание стратегии защиты с первых минут.',
-    color: 'from-amber-900/40 to-yellow-900/20',
-    accent: 'hsl(43,74%,52%)',
+    color: 'from-amber-100/80 to-yellow-50/60',
+    accent: 'hsl(36,72%,36%)',
   },
   {
     id: 2,
@@ -17,8 +17,8 @@ const services = [
     title: 'Представительство в суде',
     subtitle: 'Все инстанции',
     description: 'Профессиональное представление интересов в районных, городских судах, апелляции и кассации.',
-    color: 'from-stone-800/60 to-stone-900/40',
-    accent: 'hsl(45,60%,60%)',
+    color: 'from-stone-100/80 to-stone-50/60',
+    accent: 'hsl(33,55%,35%)',
   },
   {
     id: 3,
@@ -26,8 +26,8 @@ const services = [
     title: 'Обжалование приговоров',
     subtitle: 'Апелляция · Кассация',
     description: 'Обжалование незаконных или несправедливых приговоров. Подготовка жалоб в вышестоящие инстанции вплоть до ВС РФ.',
-    color: 'from-zinc-800/60 to-zinc-900/40',
-    accent: 'hsl(38,65%,50%)',
+    color: 'from-zinc-100/80 to-zinc-50/60',
+    accent: 'hsl(36,65%,38%)',
   },
   {
     id: 4,
@@ -35,8 +35,8 @@ const services = [
     title: 'Досудебное соглашение',
     subtitle: 'Смягчение наказания',
     description: 'Содействие в заключении досудебного соглашения о сотрудничестве для смягчения наказания.',
-    color: 'from-neutral-800/60 to-neutral-900/40',
-    accent: 'hsl(43,74%,52%)',
+    color: 'from-neutral-100/80 to-neutral-50/60',
+    accent: 'hsl(36,72%,36%)',
   },
   {
     id: 5,
@@ -44,8 +44,8 @@ const services = [
     title: 'Меры пресечения',
     subtitle: 'Залог · Домашний арест',
     description: 'Защита от незаконного содержания под стражей. Ходатайства о залоге, домашнем аресте, запрете определённых действий.',
-    color: 'from-stone-800/50 to-amber-950/30',
-    accent: 'hsl(45,75%,58%)',
+    color: 'from-amber-50/80 to-stone-100/60',
+    accent: 'hsl(40,70%,40%)',
   },
 ];
 
@@ -166,7 +166,7 @@ export default function ServicesSection() {
                 <p className="text-sm text-muted-foreground font-golos mb-4">Вы просмотрели все услуги</p>
                 <button onClick={resetCards}
                   className="px-6 py-3 rounded-xl font-golos font-semibold text-sm"
-                  style={{ background: 'linear-gradient(135deg, hsl(45,85%,65%), hsl(43,74%,45%))', color: 'hsl(20,10%,6%)' }}>
+                  style={{ background: 'linear-gradient(135deg, hsl(40,80%,48%), hsl(36,72%,34%))', color: '#fff' }}>
                   Посмотреть снова
                 </button>
               </div>
@@ -180,7 +180,7 @@ export default function ServicesSection() {
                     height: '300px',
                     borderRadius: '1rem',
                     background: `linear-gradient(135deg, ${secondCard.color})`,
-                    border: '1px solid hsla(43,74%,52%,0.1)',
+                    border: '1px solid hsla(36,72%,40%,0.12)',
                     transform: 'scale(0.95)',
                     opacity: 0.6,
                   }} />
@@ -190,8 +190,8 @@ export default function ServicesSection() {
                   style={{
                     height: '280px',
                     borderRadius: '1rem',
-                    background: 'hsl(20,8%,10%)',
-                    border: '1px solid hsla(43,74%,52%,0.07)',
+                    background: 'hsl(38,22%,91%)',
+                    border: '1px solid hsla(36,72%,40%,0.08)',
                     transform: 'scale(0.9)',
                     opacity: 0.4,
                   }} />
@@ -205,9 +205,9 @@ export default function ServicesSection() {
                   style={{
                     height: '300px',
                     borderRadius: '1.25rem',
-                    background: `linear-gradient(135deg, hsl(20,8%,12%), hsl(20,8%,9%))`,
-                    border: '1px solid hsla(43,74%,52%,0.2)',
-                    boxShadow: '0 20px 60px hsla(20,10%,2%,0.6), 0 0 0 1px hsla(43,74%,52%,0.08)',
+                    background: `linear-gradient(135deg, #ffffff, hsl(40,25%,97%))`,
+                    border: '1px solid hsla(36,72%,40%,0.18)',
+                    boxShadow: '0 20px 50px hsla(25,25%,12%,0.12), 0 0 0 1px hsla(36,72%,40%,0.1)',
                     transform: isDragging
                       ? `translateX(${dragOffset.x}px) translateY(${dragOffset.y * 0.3}px) rotate(${getRotation()}deg)`
                       : 'none',
@@ -227,13 +227,13 @@ export default function ServicesSection() {
                   {/* Swipe hint overlays */}
                   {isDragging && dragOffset.x > 30 && (
                     <div className="absolute inset-0 flex items-center justify-end pr-8 pointer-events-none"
-                      style={{ background: 'linear-gradient(to left, hsla(120,40%,30%,0.3), transparent)', borderRadius: '1.25rem' }}>
+                      style={{ background: 'linear-gradient(to left, hsla(120,50%,50%,0.15), transparent)', borderRadius: '1.25rem' }}>
                       <span className="text-2xl">👍</span>
                     </div>
                   )}
                   {isDragging && dragOffset.x < -30 && (
                     <div className="absolute inset-0 flex items-center justify-start pl-8 pointer-events-none"
-                      style={{ background: 'linear-gradient(to right, hsla(0,40%,30%,0.3), transparent)', borderRadius: '1.25rem' }}>
+                      style={{ background: 'linear-gradient(to right, hsla(0,60%,55%,0.15), transparent)', borderRadius: '1.25rem' }}>
                       <span className="text-2xl">✕</span>
                     </div>
                   )}
@@ -257,7 +257,7 @@ export default function ServicesSection() {
                     </p>
 
                     <div className="flex items-center gap-2 mt-4 pt-4"
-                      style={{ borderTop: '1px solid hsla(43,74%,52%,0.1)' }}>
+                      style={{ borderTop: '1px solid hsla(36,72%,40%,0.12)' }}>
                       <span className="text-xs text-muted-foreground font-golos">Потяните карточку</span>
                       <div className="flex gap-1 ml-auto">
                         <span className="text-xs glass px-2 py-1 rounded-full">← отклонить</span>
@@ -287,14 +287,14 @@ export default function ServicesSection() {
                 onClick={() => removeTop('folder')}
                 className={`w-16 h-16 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all active:scale-90 ${folderPulse ? 'animate-pulse-gold' : ''}`}
                 style={{
-                  background: 'linear-gradient(135deg, hsl(43,74%,52%), hsl(38,60%,38%))',
-                  boxShadow: '0 8px 24px hsla(43,74%,52%,0.4)',
+                  background: 'linear-gradient(135deg, hsl(40,80%,48%), hsl(36,72%,34%))',
+                  boxShadow: '0 8px 24px hsla(36,72%,40%,0.35)',
                 }}>
-                <Icon name="FolderOpen" size={22} style={{ color: 'hsl(20,10%,6%)' }} />
+                <Icon name="FolderOpen" size={22} style={{ color: '#fff' }} />
               </button>
               {folderPulse && (
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-gold rounded-full flex items-center justify-center">
-                  <span className="text-[8px] font-bold" style={{ color: 'hsl(20,10%,6%)' }}>
+                  <span className="text-[8px] font-bold" style={{ color: '#fff' }}>
                     {services.length - cards.length + 1}
                   </span>
                 </div>
@@ -304,7 +304,7 @@ export default function ServicesSection() {
             <button
               onClick={() => removeTop('right')}
               className="w-14 h-14 rounded-full glass flex items-center justify-center text-gold transition-all active:scale-90"
-              style={{ border: '1px solid hsla(43,74%,52%,0.2)' }}>
+              style={{ border: '1px solid hsla(36,72%,40%,0.2)' }}>
               <Icon name="Check" size={20} />
             </button>
           </div>

@@ -53,30 +53,30 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="noise-bg min-h-screen" style={{ background: 'hsl(20,10%,6%)' }}>
+    <div className="noise-bg min-h-screen" style={{ background: 'hsl(40,30%,97%)' }}>
       {/* Top accent line */}
       <div className="fixed top-0 left-0 right-0 z-40 h-[1px]"
-        style={{ background: 'linear-gradient(90deg, transparent, hsla(43,74%,52%,0.5) 40%, hsla(43,74%,52%,0.5) 60%, transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, hsla(36,72%,40%,0.4) 40%, hsla(36,72%,40%,0.4) 60%, transparent)' }} />
 
       <div id="hero"><HeroSection /></div>
 
       <div className="h-[1px] mx-8"
-        style={{ background: 'linear-gradient(90deg, transparent, hsla(43,74%,52%,0.2), transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, hsla(36,72%,40%,0.15), transparent)' }} />
 
       <div id="services"><ServicesSection /></div>
 
       <div className="h-[1px] mx-8"
-        style={{ background: 'linear-gradient(90deg, transparent, hsla(43,74%,52%,0.2), transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, hsla(36,72%,40%,0.15), transparent)' }} />
 
       <div id="cases"><CasesSection /></div>
 
       <div className="h-[1px] mx-8"
-        style={{ background: 'linear-gradient(90deg, transparent, hsla(43,74%,52%,0.2), transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, hsla(36,72%,40%,0.15), transparent)' }} />
 
       <BlogSection />
 
       <div className="h-[1px] mx-8"
-        style={{ background: 'linear-gradient(90deg, transparent, hsla(43,74%,52%,0.2), transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, hsla(36,72%,40%,0.15), transparent)' }} />
 
       <div id="contact"><ContactSection /></div>
 

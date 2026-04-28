@@ -68,19 +68,19 @@ export default function BlogSection() {
         <div
           className="rounded-2xl overflow-hidden mb-4 cursor-pointer active:scale-[0.98] transition-all"
           style={{
-            background: 'linear-gradient(135deg, hsl(20,8%,12%), hsl(20,8%,9%))',
-            border: '1px solid hsla(43,74%,52%,0.2)',
-            boxShadow: '0 20px 40px hsla(20,10%,2%,0.5)',
+            background: '#ffffff',
+            border: '1px solid hsla(36,72%,40%,0.2)',
+            boxShadow: '0 8px 32px hsla(25,25%,12%,0.1)',
           }}
           onClick={() => markRead(featured.id)}
         >
           {/* Top accent */}
-          <div className="h-1" style={{ background: 'linear-gradient(90deg, hsl(45,85%,65%), hsl(43,74%,45%))' }} />
+          <div className="h-1" style={{ background: 'linear-gradient(90deg, hsl(40,80%,48%), hsl(36,72%,34%))' }} />
 
           <div className="p-5">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 text-3xl"
-                style={{ background: 'hsla(43,74%,52%,0.12)' }}>
+                style={{ background: 'hsla(36,72%,40%,0.08)' }}>
                 {featured.emoji}
               </div>
               <div className="flex-1 min-w-0">
@@ -105,7 +105,7 @@ export default function BlogSection() {
             </div>
 
             <div className="flex items-center justify-between mt-4 pt-4"
-              style={{ borderTop: '1px solid hsla(43,74%,52%,0.1)' }}>
+              style={{ borderTop: '1px solid hsla(36,72%,40%,0.1)' }}>
               <div className="flex items-center gap-3">
                 <span className="text-xs text-muted-foreground font-golos flex items-center gap-1">
                   <Icon name="Clock" size={11} />
@@ -128,8 +128,9 @@ export default function BlogSection() {
               key={post.id}
               className="rounded-xl overflow-hidden cursor-pointer active:scale-[0.98] transition-all"
               style={{
-                background: readIds.includes(post.id) ? 'hsl(20,8%,8%)' : 'hsl(20,8%,10%)',
-                border: '1px solid hsla(43,74%,52%,0.07)',
+                background: readIds.includes(post.id) ? 'hsl(40,20%,94%)' : '#ffffff',
+                border: '1px solid hsla(36,72%,40%,0.1)',
+                boxShadow: '0 1px 6px hsla(25,25%,12%,0.05)',
                 opacity: readIds.includes(post.id) ? 0.7 : 1,
               }}
               onClick={() => markRead(post.id)}

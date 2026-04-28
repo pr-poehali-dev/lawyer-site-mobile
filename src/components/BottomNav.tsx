@@ -21,11 +21,11 @@ export default function BottomNav({ active, onChange }: BottomNavProps) {
         <div
           className="rounded-2xl flex items-stretch"
           style={{
-            background: 'hsla(20,10%,5%,0.95)',
+            background: 'hsla(40,30%,98%,0.92)',
             backdropFilter: 'blur(30px)',
             WebkitBackdropFilter: 'blur(30px)',
-            border: '1px solid hsla(43,74%,52%,0.15)',
-            boxShadow: '0 -4px 40px hsla(20,10%,2%,0.6), 0 0 0 0.5px hsla(43,74%,52%,0.08)',
+            border: '1px solid hsla(36,72%,40%,0.15)',
+            boxShadow: '0 -4px 40px hsla(25,25%,12%,0.1), 0 0 0 0.5px hsla(36,72%,40%,0.08)',
           }}
         >
           {tabs.map((tab, i) => {
@@ -44,7 +44,7 @@ export default function BottomNav({ active, onChange }: BottomNavProps) {
                     style={{
                       width: '32px',
                       height: '2px',
-                      background: 'linear-gradient(90deg, hsl(45,85%,65%), hsl(43,74%,45%))',
+                      background: 'linear-gradient(90deg, hsl(40,80%,48%), hsl(36,72%,34%))',
                     }}
                   />
                 )}
@@ -53,7 +53,7 @@ export default function BottomNav({ active, onChange }: BottomNavProps) {
                 {isActive && (
                   <div
                     className="absolute inset-1 rounded-xl pointer-events-none"
-                    style={{ background: 'hsla(43,74%,52%,0.06)' }}
+                    style={{ background: 'hsla(36,72%,40%,0.07)' }}
                   />
                 )}
 
@@ -61,7 +61,7 @@ export default function BottomNav({ active, onChange }: BottomNavProps) {
                 {i > 0 && !isActive && active !== tabs[i - 1].id && (
                   <div
                     className="absolute left-0 top-1/4 bottom-1/4 w-[1px]"
-                    style={{ background: 'hsla(43,74%,52%,0.08)' }}
+                    style={{ background: 'hsla(36,72%,40%,0.1)' }}
                   />
                 )}
 
@@ -73,13 +73,13 @@ export default function BottomNav({ active, onChange }: BottomNavProps) {
                     name={tab.icon}
                     fallback="Home"
                     size={20}
-                    style={{ color: isActive ? 'hsl(43,74%,52%)' : 'hsl(45,15%,45%)' }}
+                    style={{ color: isActive ? 'hsl(36,72%,36%)' : 'hsl(25,12%,55%)' }}
                   />
                 </div>
 
                 <span
                   className="relative z-10 text-[10px] font-golos font-medium transition-all"
-                  style={{ color: isActive ? 'hsl(45,85%,65%)' : 'hsl(45,15%,45%)' }}
+                  style={{ color: isActive ? 'hsl(36,72%,32%)' : 'hsl(25,12%,55%)' }}
                 >
                   {tab.label}
                 </span>

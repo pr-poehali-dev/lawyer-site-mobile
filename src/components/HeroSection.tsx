@@ -30,16 +30,16 @@ export default function HeroSection() {
       {/* Background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-20%] w-[500px] h-[500px] rounded-full"
-          style={{ background: 'radial-gradient(circle, hsla(43,74%,52%,0.12) 0%, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, hsla(36,72%,40%,0.1) 0%, transparent 70%)' }} />
         <div className="absolute bottom-[10%] left-[-15%] w-[400px] h-[400px] rounded-full"
-          style={{ background: 'radial-gradient(circle, hsla(43,74%,52%,0.07) 0%, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, hsla(36,72%,40%,0.06) 0%, transparent 70%)' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[1px]"
-          style={{ background: 'linear-gradient(90deg, transparent, hsla(43,74%,52%,0.3), transparent)' }} />
+          style={{ background: 'linear-gradient(90deg, transparent, hsla(36,72%,40%,0.25), transparent)' }} />
       </div>
 
-      {/* Decorative lines */}
+      {/* Decorative line */}
       <div className="absolute top-0 left-0 right-0 h-[1px]"
-        style={{ background: 'linear-gradient(90deg, transparent, hsla(43,74%,52%,0.4), transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, hsla(36,72%,40%,0.35), transparent)' }} />
 
       <div className="relative z-10 max-w-lg mx-auto w-full">
         {/* Badge */}
@@ -84,7 +84,7 @@ export default function HeroSection() {
               transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
               transition: 'transform 0.15s ease-out',
               transformStyle: 'preserve-3d',
-              boxShadow: '0 40px 80px hsla(20,10%,2%,0.8), 0 0 0 1px hsla(43,74%,52%,0.15)',
+              boxShadow: '0 32px 64px hsla(25,25%,12%,0.18), 0 0 0 1px hsla(36,72%,40%,0.2)',
             }}
           >
             <img
@@ -95,9 +95,9 @@ export default function HeroSection() {
             />
             {/* Overlay */}
             <div className="absolute inset-0"
-              style={{ background: 'linear-gradient(to top, hsl(20,10%,6%) 0%, transparent 60%)' }} />
+              style={{ background: 'linear-gradient(to top, hsl(40,30%,97%) 0%, transparent 55%)' }} />
             <div className="absolute inset-0"
-              style={{ background: 'linear-gradient(135deg, hsla(43,74%,52%,0.08) 0%, transparent 50%)' }} />
+              style={{ background: 'linear-gradient(135deg, hsla(36,72%,40%,0.07) 0%, transparent 50%)' }} />
 
             {/* Floating info */}
             <div className="absolute bottom-4 left-4 right-4">
@@ -116,7 +116,7 @@ export default function HeroSection() {
             {/* Shine effect */}
             <div className="absolute inset-0 pointer-events-none"
               style={{
-                background: `linear-gradient(${135 + tilt.y * 5}deg, hsla(255,255%,255%,0.05) 0%, transparent 60%)`,
+                background: `linear-gradient(${135 + tilt.y * 5}deg, rgba(255,255,255,0.12) 0%, transparent 60%)`,
                 transition: 'background 0.15s',
               }} />
           </div>
@@ -129,7 +129,8 @@ export default function HeroSection() {
             { value: '24/7', label: 'На связи' },
             { value: '1 день', label: 'Первая консультация' },
           ].map((stat) => (
-            <div key={stat.label} className="glass rounded-xl p-3 text-center">
+            <div key={stat.label} className="glass rounded-xl p-3 text-center"
+              style={{ boxShadow: '0 2px 12px hsla(36,72%,40%,0.08)' }}>
               <p className="font-cormorant text-2xl font-semibold text-gold">{stat.value}</p>
               <p className="text-[10px] text-muted-foreground font-golos leading-tight mt-0.5">{stat.label}</p>
             </div>
@@ -138,15 +139,15 @@ export default function HeroSection() {
 
         {/* CTA */}
         <div className={`flex gap-3 transition-all duration-700 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <button className="flex-1 py-4 rounded-xl font-golos font-semibold text-sm tracking-wide transition-all active:scale-95"
+          <button className="flex-1 py-4 rounded-xl font-golos font-semibold text-sm tracking-wide transition-all active:scale-95 text-white"
             style={{
-              background: 'linear-gradient(135deg, hsl(45,85%,65%), hsl(43,74%,45%))',
-              color: 'hsl(20,10%,6%)',
-              boxShadow: '0 8px 32px hsla(43,74%,52%,0.35)',
+              background: 'linear-gradient(135deg, hsl(40,80%,48%), hsl(36,72%,34%))',
+              boxShadow: '0 8px 28px hsla(36,72%,40%,0.35)',
             }}>
             Получить консультацию
           </button>
-          <button className="px-5 py-4 rounded-xl font-golos font-medium text-sm glass text-foreground flex items-center gap-2 transition-all active:scale-95">
+          <button className="px-5 py-4 rounded-xl font-golos font-medium text-sm glass text-foreground flex items-center gap-2 transition-all active:scale-95"
+            style={{ boxShadow: '0 2px 12px hsla(36,72%,40%,0.1)' }}>
             <Icon name="Phone" size={16} />
           </button>
         </div>
